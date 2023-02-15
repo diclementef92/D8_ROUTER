@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Comments from "./Comments";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
@@ -30,13 +31,13 @@ const MovieDetails = () => {
 
   return (
     <Container className="text-light">
-      <h1>{movie.Title}</h1>
+      <h1 className="my-4">{movie.Title}</h1>
       <Row>
         <Col xs={6}>
           <img className="mb-4" src={movie.Poster}></img>
         </Col>
         <Col xs={6}>
-          <Table variant="dark">
+          <Table className="p-4" variant="dark">
             <tbody>
               <tr>
                 <td>Genre:</td>
@@ -69,6 +70,9 @@ const MovieDetails = () => {
         <Button className="col-2 btn btn-light" onClick={() => navigate(-1)}>
           torna indietro
         </Button>
+      </Row>
+      <Row>
+        <Comments imdbId={movie.imdbID}></Comments>
       </Row>
     </Container>
   );
