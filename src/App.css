@@ -23,6 +23,7 @@
 .poster {
   width: 100%;
   max-width: 200px;
+  cursor: pointer;
   /* flex-basis: 0%; */
   /* width: 300px; */
   /* object-fit: cover; */

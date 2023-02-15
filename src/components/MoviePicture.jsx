@@ -1,10 +1,18 @@
 import { Component } from "react";
-import { Image } from "react-bootstrap";
+import { Button, Col, Image, Row } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
-class MoviePicture extends Component {
-  render() {
-    return <Image className="poster my-4" src={this.props.src}></Image>;
-  }
-}
+const MoviePicture = (props) => {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Image
+        className="poster mt-4 mb-2"
+        src={props.movie.Poster}
+        onClick={() => navigate(`/movie-details/${props.movie.imdbID}`)}
+      ></Image>
+    </>
+  );
+};
 
 export default MoviePicture;
