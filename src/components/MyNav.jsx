@@ -9,7 +9,7 @@ const MyNav = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand>
           <img src="/assets/img/logo.png" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

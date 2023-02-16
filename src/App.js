@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import MovieDetails from "./components/MovieDetails";
+import Tvshows from "./components/Tvshows";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             path="/movies"
             element={<Movies search="harry potter" />}
           ></Route>
-          <Route path="/tvshows" element={<Movies search="friends" />}></Route>
+          <Route path="/tvshows" element={<Tvshows search="batman" />}></Route>
           <Route
             path="/movie-details/:movieId"
             element={<MovieDetails />}
